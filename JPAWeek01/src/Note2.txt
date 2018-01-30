@@ -1,9 +1,3 @@
-package _01.notlar;
-
-public class EntityNedir {
-
-}
-
 // Entity -> varlik anlamina gelmektedir.
 // entity -> persistent object -> kalici obje
 
@@ -70,7 +64,3 @@ public class EntityNedir {
 // lightweight -> minimum configuration ,
 // minimum impact -> kod degisikligi yaptigimizda minium etki , daha az bagimli olmasi.
 // (bu kavrami spring icin de gorebiliriz)
-
-
-
-

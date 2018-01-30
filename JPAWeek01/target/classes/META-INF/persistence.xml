@@ -8,7 +8,7 @@ version="2.1">
 	<persistence-unit name="EmployeePersistenceUnit"
 		transaction-type="RESOURCE_LOCAL">
 	
-		<class>_02.ornek.model.Employee</class>
+		<class>model.Employee</class>
 
 		<properties>				
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />

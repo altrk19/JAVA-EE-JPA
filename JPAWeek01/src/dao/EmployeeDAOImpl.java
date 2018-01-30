@@ -1,4 +1,4 @@
-package _02.ornek.dao;
+package dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
-import _02.ornek.model.Employee;
+import model.Employee;
 
 
 

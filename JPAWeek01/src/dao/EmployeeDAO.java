@@ -1,8 +1,8 @@
-package _02.ornek.dao;
+package dao;
 
 import java.util.List;
 
-import _02.ornek.model.Employee;
+import model.Employee;
 
 
 

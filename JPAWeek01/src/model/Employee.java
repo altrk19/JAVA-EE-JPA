@@ -1,4 +1,4 @@
-package _02.ornek.model;
+package model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

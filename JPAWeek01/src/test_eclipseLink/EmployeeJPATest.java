@@ -1,4 +1,4 @@
-package _02.ornek.test;
+package test_eclipseLink;
 
 import java.util.List;
 
@@ -6,11 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import _02.ornek.dao.EmployeeDAO;
-import _02.ornek.dao.EmployeeDAOImpl;
-import _02.ornek.model.Employee;
-
-
+import dao.EmployeeDAO;
+import dao.EmployeeDAOImpl;
+import model.Employee;
 
 public class EmployeeJPATest {
 
@@ -32,7 +30,6 @@ public class EmployeeJPATest {
 		employeeDAO.insertEmployee(employee2);
 		employeeDAO.insertEmployee(employee3);
 
-		//
 
 		Employee employeeFound = employeeDAO.getEmployeeById(2);
 
