@@ -1,0 +1,1 @@
+ManyToOne       ve           OneToOne         ile ilgili jpa örneðiJPAWeek02v1 ile ayný fakat   Hibernate kullanýldý.
