@@ -1,0 +1,4 @@
+sadece hibernate kullanýldý ve 
+@Enumerated
+@Temporal(TemporalType.DATE)
+@Lob

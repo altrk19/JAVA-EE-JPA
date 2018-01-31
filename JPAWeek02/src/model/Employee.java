@@ -26,7 +26,7 @@ import javax.persistence.TemporalType;
 // Tablo ismini degistirmek icin @Table annotation'inindan yararlarniriz.
 public class Employee {
 
-	@Id
+	
 	// Annotation'lari property/instance variable uzerine koyabiliriz.
 	// bununla birlikte getter metotlar uzerine de koyabiliriz.
 	// setter uzerine koymak etkisizdir.
@@ -43,8 +43,8 @@ public class Employee {
 
 	// @GeneratedValue(strategy=GenerationType.TABLE)
 
-	@TableGenerator(name = "EMP_GEN")
-	@GeneratedValue(generator = "EMP_GEN")
+	////@TableGenerator(name = "EMP_GEN")
+	////@GeneratedValue(generator = "EMP_GEN")
 
 	// @TableGenerator(name="EMP_GEN_DETAILED",
 	// table="KEY_GEN",
@@ -58,9 +58,11 @@ public class Employee {
 	// TEST Oracle!
 	// @SequenceGenerator(name="generatorName" , sequenceName="sequenceName")
 	// @GeneratedValue(generator="generatorName")
-
 	// @GeneratedValue(strategy=GenerationType.SEQUENCE)
-
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "emp_id")
 	private int id;
 

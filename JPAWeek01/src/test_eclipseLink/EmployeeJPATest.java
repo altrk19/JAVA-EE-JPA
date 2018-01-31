@@ -23,9 +23,9 @@ public class EmployeeJPATest {
 
 		EmployeeDAO employeeDAO = new EmployeeDAOImpl(entityManager);
 
-		Employee employee1 = new Employee(1, "ali", "bey", 5000);
-		Employee employee2 = new Employee(2, "abdullah", "dagci", 5900);
-		Employee employee3 = new Employee(3, "yilmaz", "reyis", 1500);
+		Employee employee1 = new Employee("ali", "bey", 5000);
+		Employee employee2 = new Employee("abdullah", "dagci", 5900);
+		Employee employee3 = new Employee("yilmaz", "reyis", 1500);
 		employeeDAO.insertEmployee(employee1);
 		employeeDAO.insertEmployee(employee2);
 		employeeDAO.insertEmployee(employee3);

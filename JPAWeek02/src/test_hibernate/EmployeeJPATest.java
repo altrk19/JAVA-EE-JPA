@@ -32,7 +32,7 @@ public class EmployeeJPATest {
 
 
 
-		Employee employee1 = new Employee("ali", "bey", 5000);                	// @Id ve @GeneratedValue(generator = "EMP_GEN")
+		Employee employee1 = new Employee("ali", "bey", 5000);                	// @Id 
 		Employee employee2 = new Employee("abdullah", "dagci", 5900);
 		Employee employee3 = new Employee("yilmaz", "erdogan", 1500);
 
@@ -55,7 +55,7 @@ public class EmployeeJPATest {
 		employee2.setStartDate(employeeStartDate2);
 		employee3.setStartDate(employeeStartDate3);
 
-		byte[] image1 = "image1.jpg".getBytes();
+		byte[] image1 = "image1.jpg".getBytes();                                         //@Lob
 		byte[] image2 = "image2.jpg".getBytes();
 		byte[] image3 = "image3.jpg".getBytes();
 
