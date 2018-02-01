@@ -1,0 +1,4 @@
+ManyToOne ve ManyToMany iliþkileri eklendi.
+Employee Project : ManytoMany 
+Employee Phone : OneToMany
+ManytoMany  ve  OneToMany iliþkilerinde olusan yeni tablonun isim ve kolonlarýnýn adlarý deðiþtirildi.(@joincolumn ile)
