@@ -2,3 +2,9 @@ ManyToOne ve ManyToMany iliþkileri eklendi.
 Employee Project : ManytoMany 
 Employee Phone : OneToMany
 ManytoMany  ve  OneToMany iliþkilerinde olusan yeni tablonun isim ve kolonlarýnýn adlarý deðiþtirildi.(@joincolumn ile)
+
+
+Element Collection yapýsý kullanýldý. Örnek olarak çalýþan ve mailleri arasýnda OneToMany iliþki var gibi duruyor ama
+email adýnda tablo olusturmadýgýmýz için böyle bir iliþki olmaz. Bu yüzden elemnt collection yapýsýný kullanýyoruz.
+Ana tabloya herhangi bir kolon eklenmiyor. 
+Email class'ýmýz yok.

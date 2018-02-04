@@ -15,6 +15,7 @@ import dao.EmployeeDAOImpl;
 import model.Department;
 import model.Employee;
 import model.EmployeeType;
+import model.NickName;
 import model.ParkingSpace;
 import model.Phone;
 import model.Project;
@@ -129,6 +130,18 @@ public class EmployeeJPATest {
 		employee2Phones.add(phone4);						//employee2'in telefonlarý eklendi ve setlendi
 		employee2.setPhones(employee2Phones);
 		
+		
+		NickName nickName1=new NickName("beyler","beyi");
+		employeeDAO.updateNickName(employee1,nickName1);
+		
+		
+		
+		String email1="a@b.com";
+		String email2="b@c.com";
+		String email3="d@e.com";
+		employeeDAO.updateEmails(employee1, email1);
+		employeeDAO.updateEmails(employee1, email2);
+		employeeDAO.updateEmails(employee1, email3);
 		
 		employeeDAO.insertEmployee(employee1);
 		employeeDAO.insertEmployee(employee2);

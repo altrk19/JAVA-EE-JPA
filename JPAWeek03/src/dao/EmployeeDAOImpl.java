@@ -9,6 +9,7 @@ import javax.persistence.TypedQuery;
 
 import model.Department;
 import model.Employee;
+import model.NickName;
 import model.ParkingSpace;
 import model.Phone;
 import model.Project;
@@ -99,6 +100,25 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
 		entityManager.persist(phone);
+		transaction.commit();
+		
+	}
+
+	@Override
+	public void updateNickName(Employee employee ,NickName nickName) {
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		employee.setNickName(nickName);
+		//entityManager.persist(nickName);        nickname entity olmadýgý için persist yapamýyorum. update iþlemi yapýyorum transactionlar ile
+		transaction.commit();
+		
+	}
+
+	@Override
+	public void updateEmails(Employee employee, String email) {
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		employee.getEmails().add(email);                              //Employee'un email hesaplarý eklenecek. email listesi çekildi ve eklendi.
 		transaction.commit();
 		
 	}

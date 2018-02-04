@@ -1,10 +1,16 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Generated;
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.CollectionTable;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -95,10 +101,28 @@ public class Employee {
 	
 	
 	
+		@Embedded
+		@AttributeOverrides(value ={
+				@AttributeOverride(name = "nickName", column = @Column(name = "new_nick_name")),
+				@AttributeOverride(name = "nickSurname", column = @Column(name = "new_nick_surname"))
+		})
+	
+	
+	private NickName nickName;
+		
+	
+	@ElementCollection
+	@CollectionTable(name="EMP_EMAILS" , joinColumns=@JoinColumn(name="EMP_ID"))
+	private List<String> emails = new ArrayList<String>();
+	
+	
 	// default constructor gerekli!
 	public Employee() {
 		super();
 	}
+
+
+
 
 
 	public Employee(String name, String surname, int salary) {
@@ -199,7 +223,25 @@ public class Employee {
 	public void setPhones(List<Phone> phones) {
 		this.phones = phones;
 	}
+	
+	
+	public NickName getNickName() {
+		return nickName;
+	}
 
+
+	public void setNickName(NickName nickName) {
+		this.nickName = nickName;
+	}
+	
+	public List<String> getEmails() {
+		return emails;
+	}
+
+
+	public void setEmails(List<String> emails) {
+		this.emails = emails;
+	}
 
 	@Override
 	public String toString() {
