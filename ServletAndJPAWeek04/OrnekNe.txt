@@ -1,0 +1,10 @@
+Servlet&JSP&JPA&Bootstrap örneði.
+
+
+
+
+
+
+NOT-1:
+Entity Manager objesi, Entity üzerinde yapýlan tüm iþlemlerden sorumludur.
+Oluþturulan entityManager objesi JPAUtility sýnýfý ile oluþturulucaktýr.
