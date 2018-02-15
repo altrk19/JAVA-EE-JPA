@@ -1,0 +1,9 @@
+JSF & JPA Örneði
+addAndDelete.xhtml'e sað týkla tomcat'te calistir.
+
+
+
+
+NOT-1:src'ye sað týkla add new source-> persistence yaz
+NOT-2:persistence.xml de   localhost:3306/studentdb?serverTimezone=UTC   þekilinde yazmazsak hata veriyor. Server saati hatasý veriyor.
+NOT-3:ilk kayýt ekleniyor ama 2. kayýt eklenince primary key de hata var diyor. strategy=table degistir.
