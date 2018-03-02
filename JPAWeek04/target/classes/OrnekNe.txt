@@ -1,0 +1,36 @@
+JPQL Nedir?
+
+JPQL Kullanarak employeeName sorgulama.
+
+Quey Parameters kullanarak , parametre setleniyor ve id'si 1 olan emoloyeee getiriliyor.
+1. yaklasým:
+TypedQuery<String> query = entityManager.createQuery("Select e.name from Employee e where e.id=?1", String.class).setParameter(1, id);
+
+2. yaklasým:
+TypedQuery<String> query = entityManager.createQuery("Select e.name from Employee e where e.id=:empId", String.class).setParameter("empId", id);
+
+Query ile isim ve soyisim'i arasýnda : ile yazdýrma iþlemi.
+
+
+Query Defining
+1-Dynamic Query
+EmployeeDetails class'ý eklendi ve bu entity üzerinden sorgulama yapýldý JPQL ile.
+
+@Override																				
+	public List<EmployeeDetails> getEmployeeConstructorExpression(){
+	...                                                                        //Normalde SQL'de JOIN kullanrak yapmamýz gerekiyordu. JPQL ile objeye sorgu atýyoruz. Arkadaki iþlemleri JPA hallediyor.
+}
+
+
+
+
+2-Named   Query
+Named Query’ler @NamedQueries ve @NamedQuery annotation’i kullanilarak tanimlanir.
+@NamedQuery ve @NamedQueries annotation’larini entity sinif deklarasyonunu yaptigimiz noktada yapabiliriz yani sinifin uzerinde , bu da okunabilirlik (readability) acisindan katki saglayacaktir.
+
+Named Query’ler tum Persistence Unit’te gecerlidir. Bu nedenle ayni isimle birden fazla query tanimlanamaz.
+
+
+
+3-Dynamic Named Query
+
