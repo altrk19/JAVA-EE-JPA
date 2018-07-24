@@ -1,0 +1,10 @@
+JPQL ile Sorgular:
+Query-02 - Select
+Query-03 - Join
+Query-04 - Where,Between         (queryBetween   fonksiyonu ile yapýldý)
+Query – 05 – Aggregate Functions & Update & Delete 
+
+Criteria API
+Criteria API – 01– Select , Multiple Expression
+Criteria API – 02 – Join
+Criteria API – 03 – Where – Comparison Operator
