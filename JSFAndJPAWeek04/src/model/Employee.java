@@ -10,10 +10,10 @@ import javax.persistence.TableGenerator;
 public class Employee {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	
-	//@TableGenerator(name = "EMP_GEN")                          //bundada dublicate hatasý veriyor
-	//@GeneratedValue(generator = "EMP_GEN")
+	@TableGenerator(name = "EMP_GEN")                          //bundada dublicate hatasý veriyor
+	@GeneratedValue(generator = "EMP_GEN")
 	private int id;
 	private String name;
 	private String surname;
