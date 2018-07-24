@@ -4,8 +4,6 @@ import java.util.List;
 
 import model.Employee;
 
-
-
 public interface EmployeeDAO {
 
 	public void insertEmployee(Employee employee);

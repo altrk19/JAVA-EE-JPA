@@ -9,8 +9,6 @@ import javax.persistence.TypedQuery;
 
 import model.Employee;
 
-
-
 public class EmployeeDAOImpl implements EmployeeDAO {
 
 	private EntityManager entityManager;
@@ -61,7 +59,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		EntityTransaction transaction = entityManager.getTransaction();
 		
 		transaction.begin();
-		//transaction arasinda!
+		//transaction arsinda!
 		employee.setSalary(employee.getSalary() + raise);
 		transaction.commit();
 		
