@@ -8,7 +8,8 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;import org.omg.Messaging.SyncScopeHelper;
+import javax.persistence.Persistence;
+//import org.omg.Messaging.SyncScopeHelper;
 
 import dao.EmployeeDAO;
 import dao.EmployeeDAOImpl;
@@ -88,22 +89,33 @@ public class EmployeeJPATest {
 		employeeDAO.insertEmployee(employee2);
 		employeeDAO.insertEmployee(employee3);
 		
-		System.out.println("getEmployeeNames :");
-		employeeDAO.getEmployeeNames().forEach(System.out::println);                    //dönen listedeki elemanlarý teker teker yazdýrýr.
 		
+		
+		//çalýþanlarýn adlarýný ekrana yazdýrýr.
+		System.out.println("getEmployeeNames :");
+		employeeDAO.getEmployeeNames().forEach(System.out::println);                    
+		
+		
+		//verilen id'deki kiþinin adýný ekrana yazar
 		System.out.println("getEmployeeNameById");
 		String employeeNameId2=employeeDAO.getEmployeeNameById(2);
 		System.out.println(employeeNameId2);
 		System.out.println();
+		
+		
+		
 		//isim ve soyisim'i arasýnda : ile yazdýrma iþlemi
 		System.out.println("getEmployeeNameAndSurname");
 		List<Object[]> nameAndSurnameArray=employeeDAO.getEmployeeNameAndSurname();        
 		for(Object[] e:nameAndSurnameArray) {
 			System.out.println(e[0]+" : "+e[1]);
 		}
-		
 		System.out.println();
 		
+		
+		//Constructor Expressions
+		//Tablolarý kullanarak yeni bir tablo oluþturuyor ve verileri buraya ekleyip burdan okuyor. Sorguda New kelimesi kullanýldý
+		System.out.println("Constructor Expressions");
 		 List<EmployeeDetails> employeeDetailsList=employeeDAO.getEmployeeConstructorExpression();
 		 employeeDetailsList.forEach(System.out::println);
 		

@@ -66,9 +66,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	}
 	
 	
-	@Override																																								//ÖNEMLÝ!!
+	@Override																																								
 	public List<EmployeeDetails> getEmployeeConstructorExpression(){
-		TypedQuery<EmployeeDetails> query = entityManager.createQuery("Select New model.EmployeeDetails(e.name,e.surname,e.department.name) from Employee e",EmployeeDetails.class);           //Normalde SQL'de JOIN kullanrak yapmamýz gerekiyordu. JPQL ile objeye sorgu atýyoruz. Arkadaki iþlemleri JPA hallediyor..
+		TypedQuery<EmployeeDetails> query = entityManager.createQuery("Select New model.EmployeeDetails(e.name,e.surname,e.department.name) from Employee e",EmployeeDetails.class);           
+		//Normalde SQL'de JOIN kullanrak yapmamýz gerekiyordu. JPQL ile objeye sorgu atýyoruz. Arkadaki iþlemleri JPA hallediyor..
 		return query.getResultList();
 	}
 	
