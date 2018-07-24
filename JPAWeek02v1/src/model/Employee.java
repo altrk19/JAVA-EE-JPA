@@ -60,11 +60,7 @@ public class Employee {
 	// OneToOne iliskilere single-valued relationship adi verilir.
 	// hedef/target cardinality One oldugunda.
 	// kolon ismini degistirebiliriz
-	
-	
-	
-	
-	
+
 	private Department department;
 
 	@OneToOne
