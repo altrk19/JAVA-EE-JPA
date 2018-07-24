@@ -1,4 +1,4 @@
-sadece EclipseLink kullanýldý.
+ EclipseLink kullanýldý.
 
 @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
